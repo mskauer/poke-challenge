@@ -69,7 +69,7 @@ export default function Home() {
         </Select>
       </FormControl>
       <Button variant="contained" onClick={onSearch}>
-        Buscar
+        Search
       </Button>
       <Box sx={{ flexBasis: "100%" }} />
       {results && (loading ? <Loader /> : <PokemonsList pokemons={results} />)}
