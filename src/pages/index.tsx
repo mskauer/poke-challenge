@@ -48,6 +48,9 @@ export default function Home() {
         label="Search pokémon by their name"
         value={search.name}
         onChange={(e) => setSearch({ ...search, name: e.target.value })}
+        onKeyDown={(e) => {
+          if (e.code === "Enter") onSearch();
+        }}
         sx={{ minWidth: "280px" }}
       />
       <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
